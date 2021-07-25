@@ -1,0 +1,93 @@
+Change Log
+All notable changes to this project will be documented in this file, formatted via [this recommendation](https://keepachangelog.com/).
+
+## [2.1.0] - 2021-04-08
+### Added
+- Ability to define which tags you wish to remove from a contact when updating an existing one in your Audience.
+- New option in the form Mailchimp settings to notify users when they are already subscribed.
+
+### Changed
+- Send the note to Mailchimp when the contact is updated because of the "Update the profile" option enabled. 
+
+### Fixed
+- Send to Mailchimp form submission data even when "Entry storage" option is disabled in the Form Builder.
+- Properly handle the situation when trying to change the template for the same form multiple times.
+
+## [2.0.0] - 2021-03-16
+### Added
+- New actions: unsubscribe, archive, delete, record event. 
+- Assign existing or new tags to subscribers.
+- Add a note to subscribers (with support of Smart Tags).
+- Mark subscribers as VIP.
+- Update subscribers' information on Mailchimp if they already exist in your Audience.
+- Map form field values to any Mailchimp custom fields.
+
+### Changed
+- Rename "Lists" to "Audiences".
+- Improved integration with Mailchimp groups (segments) of your Audience (inheriting their radio/dropdown/checkbox multiple selection status).
+
+### Fixed
+- Convert form field values properly when sending data to Mailchimp.
+
+## [1.4.2] - 2020-03-03
+### Changed
+- Make the addon consistent with the updated Mailchimp branding (MailChimp to Mailchimp).
+
+### Fixed
+- Simultaneous change of Date format and Datepicker type in "Date/Time" field may produce an error on Mailchimp form submission.
+
+## [1.4.1] - 2020-01-09
+### Changed
+- Upgraded the Mailchimp library version to v2.5.4.
+
+## [1.4.0] - 2019-07-23
+### Added
+- Complete translations for French and Portuguese (Brazilian).
+
+## [1.3.0] - 2019-02-06
+### Added
+- Complete translations for Spanish, Italian, Japanese, and German.
+
+### Fixed
+- Typos, grammar, and other i18n related issues.
+
+## [1.2.0] - 2017-12-04
+### Changed
+- Birthday field special integration rules.
+- Improved localization support and translatable strings.
+- Update Mailchimp PHP library (2.4)
+
+## [1.1.1] - 2017-03-30
+### Fixed
+- Issue for some users connecting v3 accounts.
+
+## [1.1.0] - 2017-03-30
+### Added
+- Mailchimp API version 3 support.
+
+### Changed
+- Mailchimp API version 2 support has been deprecated, please reconnect forms using the new version 3.
+
+## [1.0.6] - 2017-03-09
+### Changed
+- Adjust display order so that the providers show in alphabetical order.
+
+## [1.0.5] - 2016-10-24
+### Changed
+- Namespaced Mailchimp PHP classes to prevent conflicts.
+
+## [1.0.4] - 2016-07-07
+### Changed
+- Improved error logging.
+
+## [1.0.3] - 2016-06-23
+### Changed
+- Prevent plugin from running if WPForms Pro is not activated.
+
+## [1.0.2] - 2016-05-30
+### Changed
+- Disable SSL verify which causes issues with some web hosts.
+
+## [1.0.1] - 2016-04-12
+### Changed
+- Improved error logging.
