@@ -91,7 +91,7 @@ final class Plugin {
 	 */
 	protected function hooks() {
 
-		add_action( 'wpforms_loaded', [ $this, 'init_components' ] );
+		add_action( 'wpforms_loaded', [ $this, 'init_components' ], 20 );
 		add_action( 'admin_notices', [ $this, 'upgrade_notice' ] );
 		add_action( 'update_option_wpforms_providers', [ $this, 'flush_cache' ] );
 	}

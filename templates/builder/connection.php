@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		{{ data.connection.connection_name }}
 
 		<button class="wpforms-builder-provider-connection-delete js-wpforms-builder-provider-connection-delete" type="button">
-			<i class="fa fa-times-circle"></i>
+			<i class="fa fa-trash-o"></i>
 		</button>
 
 		<input type="hidden" class="wpforms-builder-provider-connection-name" name="providers[{{ data.provider }}][{{ data.connection.id }}][connection_name]" value="{{ data.connection.connection_name }}">

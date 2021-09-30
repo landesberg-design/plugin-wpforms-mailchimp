@@ -38,7 +38,7 @@ class Date extends Base {
 
 		// Also the date value can be pass from any other WPForms field (e.g. Single Line Text).
 		// We try to convert this string to date value.
-		$date_time = date_create( $value, $this->get_timezone() );
+		$date_time = date_create( $value, wpforms_get_timezone() );
 
 		if ( $date_time ) {
 			return $date_time->format( $this->date_format );
@@ -64,12 +64,12 @@ class Date extends Base {
 
 		// Try to parse a value with a date string.
 		if ( ! empty( $date_format ) ) {
-			$date_time = date_create_from_format( $date_format, $value, $this->get_timezone() );
+			$date_time = date_create_from_format( $date_format, $value, wpforms_get_timezone() );
 		}
 
 		// Fallback to a timestamp value.
 		if ( ! $date_time && ! empty( $this->wpf_field['unix'] ) ) {
-			$date_time = date_create( '@' . $this->wpf_field['unix'], $this->get_timezone() );
+			$date_time = date_create( '@' . $this->wpf_field['unix'], wpforms_get_timezone() );
 		}
 
 		// If we have a DateTime object - return a date formatted according to expected format.
@@ -109,40 +109,5 @@ class Date extends Base {
 		}
 
 		return trim( $format );
-	}
-
-	/**
-	 * Retrieves the timezone from the site settings as a `DateTimeZone` object.
-	 *
-	 * Timezone can be based on a PHP timezone string or a ±HH:MM offset.
-	 *
-	 * TODO: switch to wpforms_get_timezone() in one of the future addon versions.
-	 *
-	 * @since 2.0.0
-	 *
-	 * @return \DateTimeZone Timezone object.
-	 */
-	protected function get_timezone() {
-
-		if ( function_exists( 'wp_timezone' ) ) {
-			return wp_timezone();
-		}
-
-		// Fallback for WordPress version < 5.3.
-		$timezone_string = get_option( 'timezone_string' );
-
-		if ( ! $timezone_string ) {
-			$offset  = (float) get_option( 'gmt_offset' );
-			$hours   = (int) $offset;
-			$minutes = ( $offset - $hours );
-
-			$sign     = ( $offset < 0 ) ? '-' : '+';
-			$abs_hour = abs( $hours );
-			$abs_mins = abs( $minutes * 60 );
-
-			$timezone_string = sprintf( '%s%02d:%02d', $sign, $abs_hour, $abs_mins );
-		}
-
-		return timezone_open( $timezone_string );
 	}
 }

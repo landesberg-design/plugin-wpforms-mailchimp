@@ -380,5 +380,5 @@ msgid "The WPForms Mailchimp plugin has been deactivated. Your site is running a
 msgstr ""
 
 #: wpforms-mailchimp.php:154
-msgid "The WPForms Mailchimp plugin has been deactivated, because it requires WPForms v1.6.5 or later to work."
+msgid "The WPForms Mailchimp plugin has been deactivated, because it requires WPForms v1.6.6 or later to work."
 msgstr ""

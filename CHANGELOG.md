@@ -1,16 +1,21 @@
 Change Log
 All notable changes to this project will be documented in this file, formatted via [this recommendation](https://keepachangelog.com/).
 
+## [2.1.1] - 2021-09-07
+### Fixed
+- Compatibility with WordPress Multisite install.
+- Compatibility with WPForms 1.6.8 and the updated Form Builder.
+
 ## [2.1.0] - 2021-04-08
 ### Added
-- Ability to define which tags you wish to remove from a contact when updating an existing one in your Audience.
+- Ability to define which tags you wish to remove from contact when updating an existing one in your Audience.
 - New option in the form Mailchimp settings to notify users when they are already subscribed.
 
 ### Changed
 - Send the note to Mailchimp when the contact is updated because of the "Update the profile" option enabled. 
 
 ### Fixed
-- Send to Mailchimp form submission data even when "Entry storage" option is disabled in the Form Builder.
+- Send to Mailchimp form submission data even when the "Entry storage" option is disabled in the Form Builder.
 - Properly handle the situation when trying to change the template for the same form multiple times.
 
 ## [2.0.0] - 2021-03-16
