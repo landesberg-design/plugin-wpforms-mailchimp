@@ -1,5 +1,5 @@
 {
-    "name": "not-a-robot-agency/wpforms-mailchimp",
+    "name": "not-a-robot-agency/plugin-wpforms-mailchimp",
     "type": "wordpress-plugin",
     "description": "",
     "require": {
