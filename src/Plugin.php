@@ -2,8 +2,8 @@
 
 namespace WPFormsMailchimp;
 
+use WPForms\Providers\Providers;
 use WPFormsMailchimp\Provider\Template;
-use WPForms\Providers\Loader as ProvidersLoader;
 
 /**
  * Class Plugin that loads the whole plugin.
@@ -108,7 +108,7 @@ final class Plugin {
 		$this->template      = new Template();
 
 		$this->template->init();
-		ProvidersLoader::get_instance()->register( $provider );
+		Providers::get_instance()->register( $provider );
 	}
 
 	/**

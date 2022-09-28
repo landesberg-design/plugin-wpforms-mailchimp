@@ -1,4 +1,4 @@
-# Copyright (C) 2021 WPForms Mailchimp
+# Copyright (C) 2022 WPForms Mailchimp
 # This file is distributed under the same license as the WPForms Mailchimp package.
 msgid ""
 msgstr ""
@@ -6,13 +6,26 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Econdig: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: WPForms <support@wpforms.com>\n"
+"MIME-Version: 1.0\n"
+"Project-Id-Version: WPForms Mailchimp\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. translators: %s - WPForms.com documentation page URI.
+#: wpforms-mailchimp.php:127
+msgid "The WPForms Mailchimp plugin has been deactivated. Your site is running an outdated version of PHP that is no longer supported and is not compatible with the Mailchimp plugin. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Read more</a> for additional information."
+msgstr ""
+
+#: wpforms-mailchimp.php:155
+msgid "The WPForms Mailchimp plugin has been deactivated, because it requires WPForms v1.7.5.5 or later to work."
+msgstr ""
 
 #: deprecated/class-mailchimp.php:80
 msgid "Mailchimp Subscription stopped by conditional logic"
@@ -103,83 +116,12 @@ msgstr ""
 msgid "Mailchimp"
 msgstr ""
 
-#: src/Provider/Process.php:276
+#: src/Provider/Process.php:277
 msgid "A contact with that email address is already subscribed."
 msgstr ""
 
-#: src/Provider/Process.php:311
+#: src/Provider/Process.php:312
 msgid "A contact with that email address was unsubscribed and resubscription is not allowed."
-msgstr ""
-
-#: src/Provider/Settings/FormBuilder.php:173, src/Provider/Settings/PageIntegrations.php:36
-msgid "Please provide a valid API Key."
-msgstr ""
-
-#: src/Provider/Settings/FormBuilder.php:191
-msgid "Could not verify API key."
-msgstr ""
-
-#. translators: %s - error details.
-#. translators: %s - error details.
-#: src/Provider/Settings/FormBuilder.php:194, src/Provider/Settings/PageIntegrations.php:60
-msgid "Mailchimp API error: %s"
-msgstr ""
-
-#: src/Provider/Settings/FormBuilder.php:241
-msgid "New Mailchimp Account"
-msgstr ""
-
-#: src/Provider/Settings/FormBuilder.php:276
-msgid "Marketing provider connection"
-msgstr ""
-
-#: src/Provider/Settings/FormBuilder.php:445
-msgid "Missing a valid API key."
-msgstr ""
-
-#: src/Provider/Settings/FormBuilder.php:571
-msgid "Subscriber Email"
-msgstr ""
-
-#: src/Provider/Settings/FormBuilder.php:576
-msgid "--- Select Email Field ---"
-msgstr ""
-
-#: src/Provider/Settings/FormBuilder.php:673, templates/builder/error.php:9, templates/settings/new-account-connection.php:36
-msgid "Something went wrong while performing an AJAX request."
-msgstr ""
-
-#: src/Provider/Settings/FormBuilder.php:675
-msgid "Full"
-msgstr ""
-
-#: src/Provider/Settings/FormBuilder.php:676
-msgid "First"
-msgstr ""
-
-#: src/Provider/Settings/FormBuilder.php:677
-msgid "Middle"
-msgstr ""
-
-#: src/Provider/Settings/FormBuilder.php:678
-msgid "Last"
-msgstr ""
-
-#. translators: %s - Mailchimp page URL: Collect Consent with GDPR Forms.
-#: src/Provider/Settings/FormBuilder.php:682
-msgid "<a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Marketing Permissions</a> are required for the \"<strong>{audience}</strong>\" audience of the \"<strong>{connection}</strong>\" connection. Please add a GDPR field to your form."
-msgstr ""
-
-#: src/Provider/Settings/FormBuilder.php:694
-msgid "--- Select Mailchimp Field ---"
-msgstr ""
-
-#: src/Provider/Settings/PageIntegrations.php:42
-msgid "Account with those credentials has been already added."
-msgstr ""
-
-#: src/Provider/Settings/PageIntegrations.php:56
-msgid "Could not verify an API key."
 msgstr ""
 
 #: templates/builder/archive.php:14, templates/builder/general.php:35
@@ -204,6 +146,10 @@ msgstr ""
 
 #: templates/builder/delete.php:18
 msgid "Contact and their personal data will be permanently removed from an audience. <strong>You cannot add them back later</strong>."
+msgstr ""
+
+#: templates/builder/error.php:9, templates/settings/new-account-connection.php:36, src/Provider/Settings/FormBuilder.php:674
+msgid "Something went wrong while performing an AJAX request."
 msgstr ""
 
 #: templates/builder/general.php:8
@@ -374,11 +320,69 @@ msgstr ""
 msgid "The API Key can be found in your Mailchimp account settings. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Learn More</a>."
 msgstr ""
 
-#. translators: %s - WPForms.com documentation page URI.
-#: wpforms-mailchimp.php:126
-msgid "The WPForms Mailchimp plugin has been deactivated. Your site is running an outdated version of PHP that is no longer supported and is not compatible with the Mailchimp plugin. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Read more</a> for additional information."
+#: src/Provider/Settings/FormBuilder.php:173, src/Provider/Settings/PageIntegrations.php:36
+msgid "Please provide a valid API Key."
 msgstr ""
 
-#: wpforms-mailchimp.php:154
-msgid "The WPForms Mailchimp plugin has been deactivated, because it requires WPForms v1.6.6 or later to work."
+#: src/Provider/Settings/FormBuilder.php:191
+msgid "Could not verify API key."
+msgstr ""
+
+#. translators: %s - error details.
+#. translators: %s - error details.
+#: src/Provider/Settings/FormBuilder.php:194, src/Provider/Settings/PageIntegrations.php:60
+msgid "Mailchimp API error: %s"
+msgstr ""
+
+#: src/Provider/Settings/FormBuilder.php:241
+msgid "New Mailchimp Account"
+msgstr ""
+
+#: src/Provider/Settings/FormBuilder.php:276
+msgid "Marketing provider connection"
+msgstr ""
+
+#: src/Provider/Settings/FormBuilder.php:445
+msgid "Missing a valid API key."
+msgstr ""
+
+#: src/Provider/Settings/FormBuilder.php:572
+msgid "Subscriber Email"
+msgstr ""
+
+#: src/Provider/Settings/FormBuilder.php:577
+msgid "--- Select Email Field ---"
+msgstr ""
+
+#: src/Provider/Settings/FormBuilder.php:676
+msgid "Full"
+msgstr ""
+
+#: src/Provider/Settings/FormBuilder.php:677
+msgid "First"
+msgstr ""
+
+#: src/Provider/Settings/FormBuilder.php:678
+msgid "Middle"
+msgstr ""
+
+#: src/Provider/Settings/FormBuilder.php:679
+msgid "Last"
+msgstr ""
+
+#. translators: %1$s - Mailchimp page URL: Collect Consent with GDPR Forms, %2$s - audience name, %3$s - connection name.
+#: src/Provider/Settings/FormBuilder.php:683
+msgid "<a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Marketing Permissions</a> are required for the \"<strong>%2$s</strong>\" audience of the \"<strong>%3$s</strong>\" connection. Please add a GDPR field to your form."
+msgstr ""
+
+#: src/Provider/Settings/FormBuilder.php:697
+msgid "--- Select Mailchimp Field ---"
+msgstr ""
+
+#: src/Provider/Settings/PageIntegrations.php:42
+msgid "Account with those credentials has been already added."
+msgstr ""
+
+#: src/Provider/Settings/PageIntegrations.php:56
+msgid "Could not verify an API key."
 msgstr ""

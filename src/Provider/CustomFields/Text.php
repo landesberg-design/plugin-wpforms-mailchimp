@@ -20,6 +20,8 @@ class Text extends Base {
 	 */
 	public function get_value( $key ) {
 
-		return $this->is_wpf_payment_field() ? wpforms_decode_string( $this->wpf_field[ $key ] ) : $this->wpf_field[ $key ];
+		$value = $this->is_wpf_payment_field() ? wpforms_decode_string( $this->wpf_field[ $key ] ) : $this->wpf_field[ $key ];
+
+		return str_replace( [ '\n', '\r', PHP_EOL ], ' ', $value );
 	}
 }

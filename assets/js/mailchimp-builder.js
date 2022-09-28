@@ -442,28 +442,7 @@ WPForms.Admin.Builder.Providers.Mailchimp = WPForms.Admin.Builder.Providers.Mail
 					removeItemButton: true,
 					callbackOnInit: function() {
 
-						var self     = this,
-							$element = $( self.passedElement.element ),
-							$input   = $( self.input.element );
-
-						/**
-						 * If a multiple select has selected choices - hide a placeholder input.
-						 * We use custom styles like `.screen-reader-text` for it,
-						 * because it avoids an issue with closing a dropdown.
-						 */
-						if ( $element.prop( 'multiple' ) ) {
-
-							// On init event.
-							if ( self.getValue( true ).length ) {
-								$input.addClass( self.config.classNames.input + '--hidden' );
-							}
-
-							// On change event.
-							$element.on( 'change', function() {
-
-								self.getValue( true ).length ? $input.addClass( self.config.classNames.input + '--hidden' ) : $input.removeClass( self.config.classNames.input + '--hidden' );
-							} );
-						}
+						wpf.initMultipleSelectWithSearch( this );
 					},
 				};
 

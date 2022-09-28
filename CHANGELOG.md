@@ -1,9 +1,22 @@
 Change Log
 All notable changes to this project will be documented in this file, formatted via [this recommendation](https://keepachangelog.com/).
 
+## [2.2.0] - 2022-09-22
+### IMPORTANT
+- Support for PHP 5.5 has been discontinued. If you are running PHP 5.5, you MUST upgrade PHP before installing the new WPForms Mailchimp and WPForms 1.7.5.5 (that the addon is relying on). Failure to do that will disable the WPForms Mailchimp plugin.
+- Support for WordPress 5.1 has been discontinued. If you are running WordPress 5.1, you MUST upgrade WordPress before installing the new WPForms Mailchimp. Failure to do that will disable the new WPForms Mailchimp functionality.
+
+### Changed
+- Improved translations by removing confusion if non-translatable placeholders are used.
+- Minimum WPForms version supported is 1.7.5.5.
+
+### Fixed
+- PHP Fatal error occurred during a form processing.
+- Smart Tags could not be inserted in the Note setting.
+
 ## [2.1.1] - 2021-09-07
 ### Fixed
-- Compatibility with WordPress Multisite install.
+- Compatibility with WordPress Multisite installs.
 - Compatibility with WPForms 1.6.8 and the updated Form Builder.
 
 ## [2.1.0] - 2021-04-08

@@ -135,6 +135,7 @@ class Process extends \WPForms\Providers\Provider\Process {
 	protected function process_connections() {
 
 		foreach ( $this->form_data['providers'][ $this->core->slug ] as $connection_id => $connection_data ) :
+			$connection_data = (array) $connection_data;
 
 			// BC: make sure that connection ID is present.
 			if ( ! isset( $connection_data['id'] ) || wpforms_is_empty_string( $connection_data['id'] ) ) {

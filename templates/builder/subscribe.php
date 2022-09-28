@@ -85,7 +85,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 
-	<div class="wpforms-builder-provider-connection-setting">
+	<div class="wpforms-builder-provider-connection-setting wpforms-panel-field wpforms-panel-field-textarea">
 		<label for="wpforms-builder-mailchimp-provider-{{ data.connection.id }}-note">
 			<?php esc_html_e( 'Note', 'wpforms-mailchimp' ); ?>
 			<a href="#" class="toggle-smart-tag-display" data-type="all" data-fields>

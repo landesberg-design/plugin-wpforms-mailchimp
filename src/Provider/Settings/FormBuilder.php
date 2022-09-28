@@ -475,6 +475,7 @@ class FormBuilder extends FormBuilderAbstract {
 		}
 
 		foreach ( $this->form_data['providers'][ $this->core->slug ] as $connection_id => &$connection ) {
+			$connection = (array) $connection;
 
 			// BC for connections <= v1.4.2.
 			if ( ! isset( $connection['id'] ) || wpforms_is_empty_string( $connection['id'] ) ) {
@@ -677,19 +678,21 @@ class FormBuilder extends FormBuilderAbstract {
 						'middle' => esc_html__( 'Middle', 'wpforms-mailchimp' ),
 						'last'   => esc_html__( 'Last', 'wpforms-mailchimp' ),
 					],
-					'gdpr'                => sprintf(
-						wp_kses( /* translators: %s - Mailchimp page URL: Collect Consent with GDPR Forms. */
-							__( '<a href="%s" target="_blank" rel="noopener noreferrer">Marketing Permissions</a> are required for the "<strong>{audience}</strong>" audience of the "<strong>{connection}</strong>" connection. Please add a GDPR field to your form.', 'wpforms-mailchimp' ),
-							[
-								'a'      => [
-									'href'   => [],
-									'target' => [],
-									'rel'    => [],
-								],
-								'strong' => [],
-							]
+					'gdpr'                => wp_kses(
+						sprintf( /* translators: %1$s - Mailchimp page URL: Collect Consent with GDPR Forms, %2$s - audience name, %3$s - connection name. */
+							__( '<a href="%1$s" target="_blank" rel="noopener noreferrer">Marketing Permissions</a> are required for the "<strong>%2$s</strong>" audience of the "<strong>%3$s</strong>" connection. Please add a GDPR field to your form.', 'wpforms-mailchimp' ),
+							'https://mailchimp.com/help/collect-consent-with-gdpr-forms/',
+							'{audience}',
+							'{connection}'
 						),
-						'https://mailchimp.com/help/collect-consent-with-gdpr-forms/'
+						[
+							'a'      => [
+								'href'   => [],
+								'target' => [],
+								'rel'    => [],
+							],
+							'strong' => [],
+						]
 					),
 					'providerPlaceholder' => esc_html__( '--- Select Mailchimp Field ---', 'wpforms-mailchimp' ),
 				],
