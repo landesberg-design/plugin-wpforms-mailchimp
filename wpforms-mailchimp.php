@@ -7,7 +7,7 @@
  * Requires PHP:      5.6
  * Author:            WPForms
  * Author URI:        https://wpforms.com
- * Version:           2.2.0
+ * Version:           2.3.0
  * Text Domain:       wpforms-mailchimp
  * Domain Path:       languages
  *
@@ -34,7 +34,7 @@ use WPFormsMailchimp\Plugin;
 
 // phpcs:disable WPForms.Comments.PHPDocDefine.MissPHPDoc
 // Plugin version.
-define( 'WPFORMS_MAILCHIMP_VERSION', '2.2.0' );
+define( 'WPFORMS_MAILCHIMP_VERSION', '2.3.0' );
 
 // Plugin URL.
 define( 'WPFORMS_MAILCHIMP_URL', plugin_dir_url( __FILE__ ) );
@@ -87,7 +87,7 @@ function wpforms_mailchimp_required() {
 		return false;
 	}
 
-	if ( version_compare( wpforms()->version, '1.7.5.5', '<' ) ) {
+	if ( version_compare( wpforms()->version, '1.8.2', '<' ) ) {
 		add_action( 'admin_init', 'wpforms_mailchimp_deactivation' );
 		add_action( 'admin_notices', 'wpforms_mailchimp_fail_wpforms_version' );
 
@@ -152,7 +152,10 @@ function wpforms_mailchimp_fail_php_version() {
 function wpforms_mailchimp_fail_wpforms_version() {
 
 	echo '<div class="notice notice-error"><p>';
-	esc_html_e( 'The WPForms Mailchimp plugin has been deactivated, because it requires WPForms v1.7.5.5 or later to work.', 'wpforms-mailchimp' );
+	printf( /* translators: Minimum required WPForms version. */
+		esc_html__( 'The WPForms Mailchimp plugin has been deactivated, because it requires WPForms v%s or later to work.', 'wpforms-mailchimp' ),
+		'1.8.2'
+	);
 	echo '</p></div>';
 
 	// phpcs:disable WordPress.Security.NonceVerification.Recommended

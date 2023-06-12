@@ -114,32 +114,95 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 
 	<div class="wpforms-builder-provider-connection-setting">
-		<label>
-			<input type="checkbox" value="1" class="js-wpforms-builder-mailchimp-provider-enable-optin" name="providers[{{ data.provider }}][{{ data.connection.id }}][options][doubleoptin]"<# if ( _.has( data.connection.options, 'doubleoptin' ) && data.connection.options.doubleoptin ) { #> checked<# } #>>&nbsp;<?php esc_html_e( 'Enable double opt-in', 'wpforms-mailchimp' ); ?>
-		</label>
-		<p class="description">
-			<?php esc_html_e( 'Send contacts an opt-in confirmation email when they subscribe to audience.', 'wpforms-mailchimp' ); ?>
-		</p>
+		<div class="wpforms-panel-field">
+			<span class="wpforms-toggle-control">
+				<input
+					type="checkbox"
+					value="1"
+					class="js-wpforms-builder-mailchimp-provider-enable-optin"
+					id="wpforms-builder-mailchimp-provider-{{ data.connection.id }}-enable-optin"
+					name="providers[{{ data.provider }}][{{ data.connection.id }}][options][doubleoptin]"
+					<# if ( _.has( data.connection.options, 'doubleoptin' ) && data.connection.options.doubleoptin ) { #> checked<# } #>
+				>
+				<label class="wpforms-toggle-control-icon" for="wpforms-builder-mailchimp-provider-{{ data.connection.id }}-enable-optin"></label>
+				<label
+					for="wpforms-builder-mailchimp-provider-{{ data.connection.id }}-enable-optin"
+					class="wpforms-toggle-control-label"
+				>
+					<?php esc_html_e( 'Enable double opt-in', 'wpforms-mailchimp' ); ?>
+				</label>
+			</span>
+			<p class="description">
+				<?php esc_html_e( 'Send contacts an opt-in confirmation email when they subscribe to audience.', 'wpforms-mailchimp' ); ?>
+			</p>
+		</div>
 	</div>
 
 	<div class="wpforms-builder-provider-connection-setting">
-		<label>
-			<input type="checkbox" value="1" class="js-wpforms-builder-mailchimp-provider-mark-vip" name="providers[{{ data.provider }}][{{ data.connection.id }}][options][vip]"<# if ( _.has( data.connection.options, 'vip' ) && data.connection.options.vip ) { #> checked<# } #>>&nbsp;<?php esc_html_e( 'Mark subscriber as VIP', 'wpforms-mailchimp' ); ?>
-		</label>
+		<div class="wpforms-panel-field">
+			<span class="wpforms-toggle-control">
+				<input
+					type="checkbox"
+					value="1"
+					class="js-wpforms-builder-mailchimp-provider-mark-vip"
+					id="wpforms-builder-mailchimp-provider-{{ data.connection.id }}-mark-vip"
+					name="providers[{{ data.provider }}][{{ data.connection.id }}][options][vip]"
+					<# if ( _.has( data.connection.options, 'vip' ) && data.connection.options.vip ) { #> checked<# } #>
+				>
+				<label class="wpforms-toggle-control-icon" for="wpforms-builder-mailchimp-provider-{{ data.connection.id }}-mark-vip"></label>
+				<label
+					for="wpforms-builder-mailchimp-provider-{{ data.connection.id }}-mark-vip"
+					class="wpforms-toggle-control-label"
+				>
+					<?php esc_html_e( 'Mark subscriber as VIP', 'wpforms-mailchimp' ); ?>
+				</label>
+			</span>
+		</div>
 	</div>
 
 	<div class="wpforms-builder-provider-connection-setting">
-		<label>
-			<input type="checkbox" value="1" class="js-wpforms-builder-mailchimp-provider-update-profile" name="providers[{{ data.provider }}][{{ data.connection.id }}][options][update_profile]"<# if ( _.has( data.connection.options, 'update_profile' ) && data.connection.options.update_profile ) { #> checked<# } #>>&nbsp;<?php esc_html_e( 'Update the profile if this contact is already in an audience', 'wpforms-mailchimp' ); ?>
-		</label>
+		<div class="wpforms-panel-field">
+			<span class="wpforms-toggle-control">
+				<input
+					type="checkbox"
+					value="1"
+					class="js-wpforms-builder-mailchimp-provider-update-profile"
+					id="wpforms-builder-mailchimp-provider-{{ data.connection.id }}-update-profile"
+					name="providers[{{ data.provider }}][{{ data.connection.id }}][options][update_profile]"
+					<# if ( _.has( data.connection.options, 'update_profile' ) && data.connection.options.update_profile ) { #> checked<# } #>
+				>
+				<label class="wpforms-toggle-control-icon" for="wpforms-builder-mailchimp-provider-{{ data.connection.id }}-update-profile"></label>
+				<label
+					for="wpforms-builder-mailchimp-provider-{{ data.connection.id }}-update-profile"
+					class="wpforms-toggle-control-label"
+				>
+					<?php esc_html_e( 'Update the profile if this contact is already in an audience', 'wpforms-mailchimp' ); ?>
+				</label>
+			</span>
+		</div>
 	</div>
 
 	<div class="wpforms-builder-provider-connection-setting<# if ( _.has( data.connection.options, 'update_profile' ) && data.connection.options.update_profile ) { #> wpforms-hidden<# } #>">
-		<input type="checkbox" value="1" class="js-wpforms-builder-mailchimp-provider-notify-user" id="wpforms-builder-mailchimp-provider-{{ data.connection.id }}-notify-user" name="providers[{{ data.provider }}][{{ data.connection.id }}][options][notify_if_subscribed]"<# if ( _.has( data.connection.options, 'notify_if_subscribed' ) && data.connection.options.notify_if_subscribed ) { #> checked<# } #>>
-		<label for="wpforms-builder-mailchimp-provider-{{ data.connection.id }}-notify-user">
-			<?php esc_html_e( 'Notify users that they are already subscribed', 'wpforms-mailchimp' ); ?>
-		</label>
-		<i class="fa fa-question-circle wpforms-help-tooltip" title="<?php esc_attr_e( 'The user will not be notified when "Update the profile" option is checked.', 'wpforms-mailchimp' ); ?>"></i>
+		<div class="wpforms-panel-field">
+			<span class="wpforms-toggle-control">
+				<input
+					type="checkbox"
+					value="1"
+					class="js-wpforms-builder-mailchimp-provider-notify-user"
+					id="wpforms-builder-mailchimp-provider-{{ data.connection.id }}-notify-user"
+					name="providers[{{ data.provider }}][{{ data.connection.id }}][options][notify_if_subscribed]"
+					<# if ( _.has( data.connection.options, 'notify_if_subscribed' ) && data.connection.options.notify_if_subscribed ) { #> checked<# } #>
+				>
+				<label class="wpforms-toggle-control-icon" for="wpforms-builder-mailchimp-provider-{{ data.connection.id }}-notify-user"></label>
+				<label
+					for="wpforms-builder-mailchimp-provider-{{ data.connection.id }}-notify-user"
+					class="wpforms-toggle-control-label"
+				>
+					<?php esc_html_e( 'Notify users that they are already subscribed', 'wpforms-mailchimp' ); ?>
+				</label>
+				<i class="fa fa-question-circle-o wpforms-help-tooltip" title="<?php esc_attr_e( 'The user will not be notified when "Update the profile" option is enabled.', 'wpforms-mailchimp' ); ?>"></i>
+			</span>
+		</div>
 	</div>
 
 </div>

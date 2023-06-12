@@ -1,4 +1,4 @@
-# Copyright (C) 2022 WPForms Mailchimp
+# Copyright (C) 2023 WPForms Mailchimp
 # This file is distributed under the same license as the WPForms Mailchimp package.
 msgid ""
 msgstr ""
@@ -6,11 +6,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Content-Transfer-Econdig: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: WPForms <support@wpforms.com>\n"
-"MIME-Version: 1.0\n"
-"Project-Id-Version: WPForms Mailchimp\n"
+"POT-Creation-Date: 2023-06-12 08:54+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -23,8 +20,9 @@ msgstr ""
 msgid "The WPForms Mailchimp plugin has been deactivated. Your site is running an outdated version of PHP that is no longer supported and is not compatible with the Mailchimp plugin. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Read more</a> for additional information."
 msgstr ""
 
-#: wpforms-mailchimp.php:155
-msgid "The WPForms Mailchimp plugin has been deactivated, because it requires WPForms v1.7.5.5 or later to work."
+#. translators: Minimum required WPForms version.
+#: wpforms-mailchimp.php:156
+msgid "The WPForms Mailchimp plugin has been deactivated, because it requires WPForms v%s or later to work."
 msgstr ""
 
 #: deprecated/class-mailchimp.php:80
@@ -72,12 +70,10 @@ msgid "Add New Account"
 msgstr ""
 
 #. translators: %s - provider name.
-#. translators: %s - provider name.
 #: deprecated/class-mailchimp.php:382, deprecated/class-mailchimp.php:450
 msgid "%s API Key"
 msgstr ""
 
-#. translators: %s - provider name.
 #. translators: %s - provider name.
 #. translators: %s - current provider name.
 #: deprecated/class-mailchimp.php:384, deprecated/class-mailchimp.php:452, templates/settings/new-account-connection.php:16
@@ -273,28 +269,28 @@ msgstr ""
 msgid "You can use <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Smart Tags</a> in notes."
 msgstr ""
 
-#: templates/builder/subscribe.php:118
+#: templates/builder/subscribe.php:132
 msgid "Enable double opt-in"
 msgstr ""
 
-#: templates/builder/subscribe.php:121
+#: templates/builder/subscribe.php:136
 msgid "Send contacts an opt-in confirmation email when they subscribe to audience."
 msgstr ""
 
-#: templates/builder/subscribe.php:127
+#: templates/builder/subscribe.php:157
 msgid "Mark subscriber as VIP"
 msgstr ""
 
-#: templates/builder/subscribe.php:133
+#: templates/builder/subscribe.php:179
 msgid "Update the profile if this contact is already in an audience"
 msgstr ""
 
-#: templates/builder/subscribe.php:140
+#: templates/builder/subscribe.php:201
 msgid "Notify users that they are already subscribed"
 msgstr ""
 
-#: templates/builder/subscribe.php:142
-msgid "The user will not be notified when \"Update the profile\" option is checked."
+#: templates/builder/subscribe.php:203
+msgid "The user will not be notified when \"Update the profile\" option is enabled."
 msgstr ""
 
 #: templates/builder/unsubscribe.php:18
@@ -328,7 +324,6 @@ msgstr ""
 msgid "Could not verify API key."
 msgstr ""
 
-#. translators: %s - error details.
 #. translators: %s - error details.
 #: src/Provider/Settings/FormBuilder.php:194, src/Provider/Settings/PageIntegrations.php:60
 msgid "Mailchimp API error: %s"

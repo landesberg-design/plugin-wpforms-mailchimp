@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				],
 			]
 		),
-		esc_url( wpforms_utm_link( 'https://wpforms.com/docs/install-use-mailchimp-addon-wpforms/#mailchimp-api', 'Integration Settings', 'Mailchimp Documentation' ) )
+		esc_url( wpforms_utm_link( 'https://wpforms.com/docs/install-use-mailchimp-addon-wpforms/#mailchimp-api', 'Settings - Integration', 'Mailchimp Documentation' ) )
 	);
 	?>
 </p>

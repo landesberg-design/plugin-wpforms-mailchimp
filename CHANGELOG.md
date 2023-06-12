@@ -1,6 +1,11 @@
 Change Log
 All notable changes to this project will be documented in this file, formatted via [this recommendation](https://keepachangelog.com/).
 
+## [2.3.0] - 2023-06-12
+### Changed
+- Checkboxes have been replaced with fancy toggles on the addon settings screen in the Form Builder.
+- Minimum WPForms version supported is 1.8.2.
+
 ## [2.2.0] - 2022-09-22
 ### IMPORTANT
 - Support for PHP 5.5 has been discontinued. If you are running PHP 5.5, you MUST upgrade PHP before installing the new WPForms Mailchimp and WPForms 1.7.5.5 (that the addon is relying on). Failure to do that will disable the WPForms Mailchimp plugin.
